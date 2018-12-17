@@ -20,7 +20,7 @@
             crossorigin="anonymous"></script>
         <script>
             $(document).ready(function() {
-                $.get(`https://api.mlab.com/api/1/databases/ocr-menu-demo/collections/dish-details?q={"rstId": "1","dishId":"1"}&apiKey=kkw5BBl1bB8nlVOuDtt5t89K3Q-ot84-`,
+                $.get("https://api.mlab.com/api/1/databases/ocr-menu-demo/collections/dish-details?q={%22rstId%22:%20%221%22,%22dishId%22:%221%22}&apiKey=kkw5BBl1bB8nlVOuDtt5t89K3Q-ot84-",
                 function(data, status){
                     for (let i = 0; i < data.length; i++) {
                         $(`#dish_name_${i}`).html(data[i].dishName);
